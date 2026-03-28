@@ -1,7 +1,7 @@
 {
   "pallets": [
     {
-      "pallet_id": "SGL-20260328-ST01-5993",
+      "pallet_id": "SGL-20260328-ST01-8021",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
@@ -132,13 +132,13 @@
       "product_code": "MILK01",
       "lot_batch": "L2025",
       "min_expiry_date": "2025_02_01",
-      "scan_timestamp": "2026_03_28T17:17:21",
+      "scan_timestamp": "2026_03_28T18:10:11",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
       "exceptions": []
     },
     {
-      "pallet_id": "SGL-20260328-ST01-0229",
+      "pallet_id": "SGL-20260328-ST01-3367",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
@@ -253,13 +253,13 @@
       "product_code": "WATER02",
       "lot_batch": "L2024",
       "min_expiry_date": "2025_01_01",
-      "scan_timestamp": "2026_03_28T17:17:21",
+      "scan_timestamp": "2026_03_28T18:10:11",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
       "exceptions": []
     },
     {
-      "pallet_id": "SGL-20260328-ST01-9701",
+      "pallet_id": "SGL-20260328-ST01-8382",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
@@ -380,13 +380,13 @@
       "product_code": "JUICE03",
       "lot_batch": "L2026",
       "min_expiry_date": "2025_01_01",
-      "scan_timestamp": "2026_03_28T17:17:21",
+      "scan_timestamp": "2026_03_28T18:10:11",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
       "exceptions": []
     },
     {
-      "pallet_id": "SGL-20260328-ST01-3112",
+      "pallet_id": "SGL-20260328-ST01-8636",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
@@ -397,7 +397,7 @@
       "product_code": "JUICE02",
       "lot_batch": "L2026",
       "min_expiry_date": "2026_11_01",
-      "scan_timestamp": "2026_03_28T17:17:21",
+      "scan_timestamp": "2026_03_28T18:10:11",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
       "exceptions": []

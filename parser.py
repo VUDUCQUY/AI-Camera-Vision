@@ -32,6 +32,7 @@ class QRParser:
     """Parses a raw QR string into a CartonData instance."""
 
     DELIMITER = "|"
+    #DELIMITER = "-"
     EXPECTED_FIELDS = 4
 
     def parse(self, raw: str) -> CartonData | None:
@@ -90,3 +91,4 @@ class QRParser:
         if not (1 <= int(month) <= 12):
             return None
         return f"{year}_{month}_01"
+        #return f"2026_12_01"
