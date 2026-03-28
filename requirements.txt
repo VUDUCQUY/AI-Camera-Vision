@@ -1,0 +1,8 @@
+# QR Warehouse Palletizing System — Python dependencies
+
+# Core QR detection (OpenCV built-in decoder — no system DLL required)
+opencv-python>=4.8.0
+
+# Test image generation (only needed for generate_test_images.py)
+qrcode[pil]>=7.4
+numpy>=1.24
