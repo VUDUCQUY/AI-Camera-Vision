@@ -1,0 +1,3442 @@
+[
+  {
+    "file": "image_001.png",
+    "num_qr": 7,
+    "qrs": [
+      "C3746|JUICE03|L2027|01-2026",
+      "C672|WATER02|L2025|04-2027",
+      "C2717|WATER02|L2024|05-2026",
+      "C3746|MILK01|L2025|03-2026",
+      "C5607|MILK01|L2024|09-2027",
+      "C2979|WATER02|L2027|05-2027",
+      "C405|MILK01|L2026|02-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C3746",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C672",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2717",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C3746",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5607",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2979",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C405",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "02-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_002.png",
+    "num_qr": 11,
+    "qrs": [
+      "C474|JUICE03|L2027|10-2028",
+      "C405|WATER02|L2026|04-2026",
+      "C363|MILK01|L2025|09-2028",
+      "C380|MILK01|L2024|11-2026",
+      "C8999|JUICE03|L2026|03-2027",
+      "C20849|JUICE03|L2026|04-2027",
+      "C5525|WATER02|L2026|01-2025",
+      "C65752|WATER02|L2026|11-2027",
+      "C844|WATER02|L2025|06-2025",
+      "C3668|JUICE03|L2025|05-2025",
+      "C383|MILK01|L2027|09-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C474",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C405",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C363",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "09-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C380",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "11-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8999",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C20849",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5525",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C65752",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C844",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3668",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C383",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "09-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_003.png",
+    "num_qr": 4,
+    "qrs": [
+      "C24038|WATER02|L2024|09-2025",
+      "C1059|WATER02|L2026|06-2026",
+      "C5127|WATER02|L2026|09-2025",
+      "C8999|MILK01|L2024|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C24038",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "09-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1059",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "06-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5127",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "09-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8999",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_004.png",
+    "num_qr": 6,
+    "qrs": [
+      "C301|JUICE03|L2025|10-2026",
+      "C971|MILK01|L2024|09-2027",
+      "C5430|MILK01|L2026|04-2026",
+      "C2676|WATER02|L2027|04-2025",
+      "C35734|WATER02|L2027|11-2027",
+      "C2205|JUICE03|L2025|03-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C301",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "10-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C971",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5430",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C2676",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "04-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C35734",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2205",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "03-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_005.png",
+    "num_qr": 3,
+    "qrs": [
+      "C235|MILK01|L2026|04-2026",
+      "C46482|JUICE03|L2027|11-2025",
+      "C65752|WATER02|L2025|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C235",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C46482",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "11-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C65752",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_006.png",
+    "num_qr": 12,
+    "qrs": [
+      "C009|MILK01|L2027|05-2028",
+      "C44906|WATER02|L2026|05-2026",
+      "C18610|JUICE03|L2025|10-2028",
+      "C99265|WATER02|L2025|10-2025",
+      "C6137|MILK01|L2026|08-2027",
+      "C41468|JUICE03|L2025|12-2026",
+      "C53338|WATER02|L2024|12-2026",
+      "C17084|JUICE03|L2025|08-2025",
+      "C8715|MILK01|L2026|07-2025",
+      "C7908|WATER02|L2025|02-2026",
+      "C536|WATER02|L2024|06-2027",
+      "C8976|JUICE03|L2025|06-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C009",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C44906",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C18610",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C99265",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6137",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C41468",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C53338",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C17084",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "08-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8715",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7908",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C536",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8976",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "06-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_007.png",
+    "num_qr": 4,
+    "qrs": [
+      "C618|MILK01|L2026|05-2028",
+      "C59686|WATER02|L2024|02-2026",
+      "C175|WATER02|L2025|09-2028",
+      "C77122|WATER02|L2026|02-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C618",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C59686",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C175",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "09-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C77122",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "02-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_008.png",
+    "num_qr": 3,
+    "qrs": [
+      "C8749|MILK01|L2026|04-2026",
+      "C5127|MILK01|L2027|06-2028",
+      "C522|WATER02|L2025|08-2027"
+    ],
+    "details": [
+      {
+        "carton_id": "C8749",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C5127",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C522",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "08-2027",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_009.png",
+    "num_qr": 7,
+    "qrs": [
+      "C28909|WATER02|L2024|07-2025",
+      "C9645|WATER02|L2027|03-2025",
+      "C1218|MILK01|L2027|03-2027",
+      "C342|MILK01|L2027|04-2026",
+      "C15059|MILK01|L2025|04-2026",
+      "C15059|JUICE03|L2025|04-2026",
+      "C44925|WATER02|L2025|09-2027"
+    ],
+    "details": [
+      {
+        "carton_id": "C28909",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9645",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "03-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1218",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C342",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C15059",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C15059",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C44925",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "09-2027",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_010.png",
+    "num_qr": 9,
+    "qrs": [
+      "C8676|WATER02|L2025|06-2027",
+      "C0683|MILK01|L2027|06-2025",
+      "C224|JUICE03|L2027|05-2026",
+      "C0771|WATER02|L2025|01-2028",
+      "C0057|JUICE03|L2026|05-2026",
+      "C154|JUICE03|L2027|05-2026",
+      "C365|WATER02|L2024|05-2027",
+      "C81354|WATER02|L2024|09-2026",
+      "C65669|WATER02|L2026|09-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C8676",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0683",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C224",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C0771",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0057",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C154",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C365",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C81354",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C65669",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "09-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_011.png",
+    "num_qr": 11,
+    "qrs": [
+      "C652|WATER02|L2026|12-2028",
+      "C067|JUICE03|L2026|04-2027",
+      "C971|JUICE03|L2026|10-2025",
+      "C383|JUICE03|L2025|03-2025",
+      "C86812|JUICE03|L2027|06-2026",
+      "C9002|JUICE03|L2025|07-2026",
+      "C818|WATER02|L2027|07-2028",
+      "C3796|MILK01|L2024|08-2026",
+      "C7097|MILK01|L2025|02-2026",
+      "C73291|MILK01|L2026|12-2028",
+      "C50248|MILK01|L2024|06-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C652",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "12-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C067",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C971",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C383",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "03-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C86812",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "06-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9002",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "07-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C818",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3796",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "08-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7097",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C73291",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "12-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C50248",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "06-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_012.png",
+    "num_qr": 10,
+    "qrs": [
+      "C703|JUICE03|L2026|03-2027",
+      "C98285|JUICE03|L2027|01-2025",
+      "C30447|MILK01|L2027|08-2027",
+      "C38708|JUICE03|L2027|03-2027",
+      "C59618|MILK01|L2025|12-2025",
+      "C5994|MILK01|L2026|09-2026",
+      "C0846|JUICE03|L2027|10-2025",
+      "C2779|WATER02|L2026|03-2026",
+      "C583|JUICE03|L2026|04-2026",
+      "C26143|WATER02|L2025|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C703",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C98285",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C30447",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C38708",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C59618",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5994",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0846",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2779",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C583",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C26143",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_013.png",
+    "num_qr": 11,
+    "qrs": [
+      "C45752|JUICE03|L2027|02-2027",
+      "C71710|MILK01|L2027|12-2025",
+      "C643|JUICE03|L2027|08-2027",
+      "C995|JUICE03|L2025|01-2025",
+      "C3236|WATER02|L2025|03-2026",
+      "C34961|WATER02|L2026|07-2027",
+      "C842|WATER02|L2027|07-2027",
+      "C20350|MILK01|L2024|07-2028",
+      "C009|JUICE03|L2026|07-2027",
+      "C07147|WATER02|L2026|07-2028",
+      "C96885|WATER02|L2027|01-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C45752",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "02-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C71710",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C643",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C995",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3236",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C34961",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C842",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C20350",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C009",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C07147",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C96885",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "01-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_014.png",
+    "num_qr": 4,
+    "qrs": [
+      "C86812|JUICE03|L2027|05-2026",
+      "C4994|JUICE03|L2024|08-2028",
+      "C25135|WATER02|L2024|12-2026",
+      "C30283|WATER02|L2027|05-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C86812",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C4994",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C25135",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C30283",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "05-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_015.png",
+    "num_qr": 3,
+    "qrs": [
+      "C82391|WATER02|L2025|01-2028",
+      "C2676|MILK01|L2025|05-2026",
+      "C2339|MILK01|L2025|02-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C82391",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2676",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C2339",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "02-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_016.png",
+    "num_qr": 6,
+    "qrs": [
+      "C887|MILK01|L2027|04-2025",
+      "C977|MILK01|L2024|06-2026",
+      "C4378|JUICE03|L2025|09-2026",
+      "C259|MILK01|L2027|01-2026",
+      "C618|WATER02|L2027|05-2026",
+      "C340|JUICE03|L2024|12-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C887",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C977",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "06-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C4378",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C259",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C618",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C340",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "12-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_017.png",
+    "num_qr": 7,
+    "qrs": [
+      "C117|JUICE03|L2026|11-2027",
+      "C336|WATER02|L2024|02-2027",
+      "C8976|WATER02|L2026|05-2027",
+      "C1494|WATER02|L2026|08-2028",
+      "C3609|WATER02|L2024|08-2028",
+      "C82673|JUICE03|L2025|05-2025",
+      "C45931|MILK01|L2024|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C117",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C336",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "02-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8976",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1494",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3609",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C82673",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C45931",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_018.png",
+    "num_qr": 7,
+    "qrs": [
+      "C65752|WATER02|L2026|04-2026",
+      "C21883|WATER02|L2025|04-2025",
+      "C5537|MILK01|L2027|04-2026",
+      "C86187|JUICE03|L2024|08-2027",
+      "C19957|JUICE03|L2024|01-2025",
+      "C790|JUICE03|L2026|06-2026",
+      "C50335|MILK01|L2026|06-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C65752",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C21883",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "04-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5537",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C86187",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C19957",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C790",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "06-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C50335",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "06-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_019.png",
+    "num_qr": 9,
+    "qrs": [
+      "C856|MILK01|L2025|05-2028",
+      "C112|JUICE03|L2027|12-2027",
+      "C5957|MILK01|L2024|06-2025",
+      "C316|JUICE03|L2024|04-2026",
+      "C74622|WATER02|L2025|05-2027",
+      "C70795|MILK01|L2025|02-2026",
+      "C438|WATER02|L2026|12-2026",
+      "C15358|JUICE03|L2027|11-2028",
+      "C8294|JUICE03|L2025|11-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C856",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C112",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "12-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5957",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C316",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C74622",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C70795",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C438",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C15358",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8294",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "11-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_020.png",
+    "num_qr": 4,
+    "qrs": [
+      "C03233|JUICE03|L2026|10-2027",
+      "C8827|MILK01|L2024|11-2027",
+      "C599|MILK01|L2025|03-2027",
+      "C176|WATER02|L2027|07-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C03233",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8827",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C599",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C176",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_021.png",
+    "num_qr": 3,
+    "qrs": [
+      "C640|MILK01|L2025|03-2028",
+      "C0607|MILK01|L2024|10-2028",
+      "C159|WATER02|L2024|09-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C640",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "03-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0607",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C159",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "09-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_022.png",
+    "num_qr": 10,
+    "qrs": [
+      "C71710|JUICE03|L2025|10-2028",
+      "C518|JUICE03|L2026|09-2025",
+      "C5662|JUICE03|L2025|06-2027",
+      "C932|JUICE03|L2026|05-2028",
+      "C92796|JUICE03|L2024|09-2026",
+      "C35734|MILK01|L2025|12-2027",
+      "C6672|JUICE03|L2027|05-2026",
+      "C59136|JUICE03|L2025|05-2026",
+      "C49506|JUICE03|L2025|10-2026",
+      "C071|WATER02|L2025|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C71710",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C518",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "09-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5662",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C932",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C92796",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C35734",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "12-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6672",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C59136",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C49506",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "10-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C071",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_023.png",
+    "num_qr": 7,
+    "qrs": [
+      "C2235|WATER02|L2027|07-2027",
+      "C81314|JUICE03|L2025|04-2028",
+      "C3742|MILK01|L2025|10-2025",
+      "C7532|WATER02|L2024|07-2025",
+      "C9346|MILK01|L2027|05-2025",
+      "C865|WATER02|L2027|06-2028",
+      "C01107|JUICE03|L2024|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C2235",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C81314",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3742",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7532",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9346",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C865",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C01107",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_024.png",
+    "num_qr": 9,
+    "qrs": [
+      "C7335|JUICE03|L2024|12-2025",
+      "C890|WATER02|L2025|10-2027",
+      "C072|JUICE03|L2024|03-2027",
+      "C1215|MILK01|L2026|07-2027",
+      "C3729|MILK01|L2025|09-2028",
+      "C785|WATER02|L2024|04-2027",
+      "C5946|MILK01|L2027|05-2026",
+      "C69140|MILK01|L2025|05-2025",
+      "C53428|JUICE03|L2026|04-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C7335",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C890",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C072",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1215",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3729",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "09-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C785",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5946",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C69140",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C53428",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_025.png",
+    "num_qr": 9,
+    "qrs": [
+      "C59836|JUICE03|L2024|12-2028",
+      "C30523|JUICE03|L2025|03-2026",
+      "C2240|WATER02|L2025|12-2026",
+      "C70380|MILK01|L2025|05-2026",
+      "C5301|MILK01|L2026|10-2025",
+      "C497|MILK01|L2024|03-2027",
+      "C79624|MILK01|L2027|07-2028",
+      "C5439|WATER02|L2026|06-2025",
+      "C5016|MILK01|L2027|07-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C59836",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "12-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C30523",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2240",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C70380",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5301",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C497",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C79624",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5439",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5016",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_026.png",
+    "num_qr": 11,
+    "qrs": [
+      "C8250|WATER02|L2027|04-2028",
+      "C1218|WATER02|L2026|08-2028",
+      "C61178|WATER02|L2025|01-2028",
+      "C3782|JUICE03|L2024|04-2028",
+      "C4695|MILK01|L2024|08-2026",
+      "C33106|MILK01|L2025|07-2027",
+      "C6873|MILK01|L2025|09-2027",
+      "C366|MILK01|L2026|05-2028",
+      "C3141|JUICE03|L2026|11-2027",
+      "C7875|JUICE03|L2024|06-2027",
+      "C4039|JUICE03|L2025|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C8250",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1218",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C61178",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3782",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C4695",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "08-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C33106",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6873",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C366",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3141",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7875",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C4039",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_027.png",
+    "num_qr": 5,
+    "qrs": [
+      "C720|JUICE03|L2025|06-2027",
+      "C290|JUICE03|L2025|01-2028",
+      "C75662|JUICE03|L2024|07-2026",
+      "C6593|JUICE03|L2024|02-2026",
+      "C65110|WATER02|L2025|07-2027"
+    ],
+    "details": [
+      {
+        "carton_id": "C720",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C290",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C75662",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "07-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6593",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C65110",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "07-2027",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_028.png",
+    "num_qr": 10,
+    "qrs": [
+      "C66498|WATER02|L2026|11-2027",
+      "C9283|MILK01|L2025|12-2026",
+      "C1457|WATER02|L2025|08-2028",
+      "C520|MILK01|L2024|04-2026",
+      "C30951|MILK01|L2027|09-2025",
+      "C2540|JUICE03|L2027|03-2025",
+      "C995|WATER02|L2026|10-2027",
+      "C956|MILK01|L2026|02-2025",
+      "C07147|MILK01|L2024|01-2026",
+      "C85549|JUICE03|L2027|02-2027"
+    ],
+    "details": [
+      {
+        "carton_id": "C66498",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9283",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1457",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C520",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "04-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C30951",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "09-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2540",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "03-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C995",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C956",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "02-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C07147",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C85549",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "02-2027",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_029.png",
+    "num_qr": 6,
+    "qrs": [
+      "C6485|WATER02|L2026|10-2027",
+      "C2676|WATER02|L2025|11-2028",
+      "C513|WATER02|L2024|09-2027",
+      "C043|WATER02|L2024|07-2025",
+      "C9229|MILK01|L2025|04-2026",
+      "C976|JUICE03|L2026|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C6485",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2676",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C513",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C043",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9229",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C976",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_030.png",
+    "num_qr": 12,
+    "qrs": [
+      "C803|WATER02|L2027|02-2025",
+      "C232|JUICE03|L2024|11-2025",
+      "C535|MILK01|L2027|01-2026",
+      "C7908|MILK01|L2026|03-2026",
+      "C695|WATER02|L2025|08-2027",
+      "C55575|WATER02|L2027|04-2027",
+      "C268|MILK01|L2024|12-2025",
+      "C025|MILK01|L2027|04-2026",
+      "C408|MILK01|L2026|10-2027",
+      "C5890|MILK01|L2024|03-2027",
+      "C29360|MILK01|L2027|08-2027",
+      "C27585|JUICE03|L2027|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C803",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "02-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C232",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "11-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C535",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7908",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C695",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C55575",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C268",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C025",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C408",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5890",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C29360",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C27585",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_031.png",
+    "num_qr": 10,
+    "qrs": [
+      "C175|JUICE03|L2025|02-2026",
+      "C309|MILK01|L2025|05-2026",
+      "C24481|JUICE03|L2024|11-2025",
+      "C2568|WATER02|L2024|03-2027",
+      "C88050|MILK01|L2026|03-2028",
+      "C62347|WATER02|L2024|03-2027",
+      "C449|WATER02|L2025|09-2027",
+      "C4036|JUICE03|L2024|10-2027",
+      "C7020|MILK01|L2027|12-2025",
+      "C2223|WATER02|L2026|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C175",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C309",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C24481",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "11-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2568",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C88050",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "03-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C62347",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C449",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C4036",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7020",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2223",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_032.png",
+    "num_qr": 11,
+    "qrs": [
+      "C84576|JUICE03|L2024|07-2027",
+      "C660|JUICE03|L2026|07-2025",
+      "C0418|WATER02|L2025|05-2026",
+      "C08435|JUICE03|L2026|11-2026",
+      "C8294|MILK01|L2027|10-2025",
+      "C366|JUICE03|L2027|10-2027",
+      "C9858|WATER02|L2026|06-2025",
+      "C1759|JUICE03|L2024|02-2026",
+      "C27947|MILK01|L2026|12-2025",
+      "C59430|MILK01|L2025|01-2026",
+      "C25084|WATER02|L2025|11-2025"
+    ],
+    "details": [
+      {
+        "carton_id": "C84576",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C660",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0418",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C08435",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "11-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8294",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C366",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9858",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1759",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C27947",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C59430",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C25084",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "11-2025",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_033.png",
+    "num_qr": 13,
+    "qrs": [
+      "C5504|WATER02|L2024|07-2028",
+      "C82069|WATER02|L2027|12-2025",
+      "C0186|WATER02|L2025|06-2028",
+      "C8779|MILK01|L2026|04-2026",
+      "C303|WATER02|L2027|05-2025",
+      "C80146|JUICE03|L2027|02-2028",
+      "C3167|JUICE03|L2024|11-2028",
+      "C190|JUICE03|L2025|03-2028",
+      "C699|JUICE03|L2027|04-2028",
+      "C392|MILK01|L2026|11-2028",
+      "C7696|MILK01|L2027|11-2027",
+      "C5675|JUICE03|L2027|02-2028",
+      "C45697|WATER02|L2026|12-2027"
+    ],
+    "details": [
+      {
+        "carton_id": "C5504",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C82069",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0186",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8779",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C303",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C80146",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "02-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3167",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C190",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "03-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C699",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C392",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7696",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5675",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "02-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C45697",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "12-2027",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_034.png",
+    "num_qr": 4,
+    "qrs": [
+      "C55904|JUICE03|L2027|05-2026",
+      "C84315|WATER02|L2026|12-2027",
+      "C6645|WATER02|L2026|03-2028",
+      "C089|MILK01|L2027|11-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C55904",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C84315",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "12-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6645",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "03-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C089",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "11-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_035.png",
+    "num_qr": 5,
+    "qrs": [
+      "C4908|MILK01|L2024|08-2027",
+      "C80485|MILK01|L2024|05-2026",
+      "C86187|WATER02|L2025|08-2028",
+      "C08267|MILK01|L2026|05-2026",
+      "C57000|MILK01|L2027|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C4908",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C80485",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C86187",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C08267",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C57000",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_036.png",
+    "num_qr": 5,
+    "qrs": [
+      "C61726|WATER02|L2024|10-2026",
+      "C0607|WATER02|L2027|02-2028",
+      "C1748|WATER02|L2025|01-2028",
+      "C0186|MILK01|L2025|06-2026",
+      "C8604|JUICE03|L2027|04-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C61726",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "10-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0607",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "02-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1748",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C0186",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "06-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C8604",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "04-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_037.png",
+    "num_qr": 11,
+    "qrs": [
+      "C7769|MILK01|L2024|10-2025",
+      "C98380|MILK01|L2024|01-2026",
+      "C197|JUICE03|L2025|02-2026",
+      "C033|MILK01|L2024|06-2028",
+      "C70028|MILK01|L2025|12-2025",
+      "C784|JUICE03|L2025|02-2026",
+      "C4804|MILK01|L2026|05-2026",
+      "C315|WATER02|L2024|06-2028",
+      "C889|JUICE03|L2026|04-2028",
+      "C6395|WATER02|L2025|03-2025",
+      "C760|WATER02|L2025|09-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C7769",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C98380",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C197",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C033",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C70028",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C784",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "02-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C4804",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C315",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C889",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6395",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "03-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C760",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "09-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_038.png",
+    "num_qr": 11,
+    "qrs": [
+      "C765|JUICE03|L2026|04-2027",
+      "C5907|JUICE03|L2027|05-2026",
+      "C38708|MILK01|L2027|05-2027",
+      "C09170|MILK01|L2025|05-2028",
+      "C055|MILK01|L2027|09-2026",
+      "C789|JUICE03|L2024|05-2027",
+      "C2772|JUICE03|L2026|01-2025",
+      "C72247|WATER02|L2025|05-2026",
+      "C998|MILK01|L2026|12-2026",
+      "C233|MILK01|L2025|10-2028",
+      "C2598|WATER02|L2027|07-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C765",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5907",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C38708",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C09170",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C055",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C789",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2772",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C72247",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C998",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "12-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C233",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2598",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_039.png",
+    "num_qr": 9,
+    "qrs": [
+      "C459|JUICE03|L2026|07-2027",
+      "C77254|JUICE03|L2026|05-2025",
+      "C1336|WATER02|L2024|05-2026",
+      "C98183|MILK01|L2026|09-2027",
+      "C811|MILK01|L2025|12-2025",
+      "C029|MILK01|L2027|03-2026",
+      "C779|JUICE03|L2025|11-2028",
+      "C7324|MILK01|L2027|04-2026",
+      "C2676|MILK01|L2026|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C459",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C77254",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1336",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C98183",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "09-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C811",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C029",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C779",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7324",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C2676",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_040.png",
+    "num_qr": 10,
+    "qrs": [
+      "C84969|JUICE03|L2026|04-2026",
+      "C22753|MILK01|L2025|05-2026",
+      "C69326|MILK01|L2026|08-2028",
+      "C9066|MILK01|L2024|11-2026",
+      "C43957|WATER02|L2027|08-2027",
+      "C07889|WATER02|L2024|11-2028",
+      "C29147|MILK01|L2027|07-2027",
+      "C352|WATER02|L2027|06-2027",
+      "C1295|MILK01|L2027|09-2028",
+      "C5764|JUICE03|L2025|08-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C84969",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C22753",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C69326",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C9066",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "11-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C43957",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "08-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C07889",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "11-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C29147",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C352",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1295",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "09-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5764",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "08-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_041.png",
+    "num_qr": 9,
+    "qrs": [
+      "C45479|WATER02|L2027|07-2025",
+      "C6862|MILK01|L2026|06-2027",
+      "C001|MILK01|L2024|04-2028",
+      "C889|WATER02|L2024|02-2027",
+      "C070|JUICE03|L2025|05-2027",
+      "C077|WATER02|L2025|09-2026",
+      "C76200|JUICE03|L2026|12-2025",
+      "C2727|JUICE03|L2024|01-2026",
+      "C195|WATER02|L2025|04-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C45479",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6862",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "06-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C001",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C889",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "02-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C070",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C077",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C76200",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2727",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C195",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "04-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_042.png",
+    "num_qr": 10,
+    "qrs": [
+      "C6477|MILK01|L2024|03-2027",
+      "C14106|WATER02|L2027|09-2026",
+      "C7324|WATER02|L2025|11-2027",
+      "C03908|WATER02|L2024|01-2025",
+      "C331|MILK01|L2027|08-2026",
+      "C161|JUICE03|L2026|01-2025",
+      "C79624|WATER02|L2025|02-2025",
+      "C21053|JUICE03|L2024|10-2028",
+      "C426|MILK01|L2025|05-2026",
+      "C86187|JUICE03|L2024|05-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C6477",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C14106",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7324",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "11-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C03908",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C331",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "08-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C161",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "01-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C79624",
+        "product_code": "WATER02",
+        "lot_batch": "L2025",
+        "expiry": "02-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C21053",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C426",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C86187",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_043.png",
+    "num_qr": 11,
+    "qrs": [
+      "C12650|JUICE03|L2025|05-2028",
+      "C200|WATER02|L2024|06-2028",
+      "C14432|MILK01|L2025|07-2026",
+      "C1343|WATER02|L2027|05-2026",
+      "C96346|JUICE03|L2027|04-2026",
+      "C5380|JUICE03|L2026|10-2026",
+      "C17699|MILK01|L2027|01-2028",
+      "C43386|MILK01|L2026|07-2027",
+      "C290|JUICE03|L2026|10-2025",
+      "C33737|MILK01|L2026|04-2026",
+      "C88050|WATER02|L2027|07-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C12650",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C200",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "06-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C14432",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "07-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1343",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C96346",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "04-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C5380",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "10-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C17699",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C43386",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "07-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C290",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C33737",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C88050",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_044.png",
+    "num_qr": 4,
+    "qrs": [
+      "C7542|WATER02|L2026|10-2027",
+      "C960|WATER02|L2026|05-2028",
+      "C290|JUICE03|L2025|07-2028",
+      "C325|MILK01|L2024|11-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C7542",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "10-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C960",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C290",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "07-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C325",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "11-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_045.png",
+    "num_qr": 9,
+    "qrs": [
+      "C758|MILK01|L2026|04-2025",
+      "C319|JUICE03|L2025|11-2026",
+      "C115|JUICE03|L2027|07-2026",
+      "C6316|JUICE03|L2026|03-2027",
+      "C86063|MILK01|L2027|04-2028",
+      "C73519|WATER02|L2027|06-2025",
+      "C720|MILK01|L2027|08-2028",
+      "C413|MILK01|L2025|05-2025",
+      "C2110|WATER02|L2027|11-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C758",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "04-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C319",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "11-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C115",
+        "product_code": "JUICE03",
+        "lot_batch": "L2027",
+        "expiry": "07-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C6316",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C86063",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "04-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C73519",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "06-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C720",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "08-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C413",
+        "product_code": "MILK01",
+        "lot_batch": "L2025",
+        "expiry": "05-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2110",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "11-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_046.png",
+    "num_qr": 6,
+    "qrs": [
+      "C9541|WATER02|L2024|10-2025",
+      "C05941|MILK01|L2026|10-2025",
+      "C1338|MILK01|L2024|05-2026",
+      "C129|JUICE03|L2024|11-2025",
+      "C59618|WATER02|L2024|05-2026",
+      "C88433|JUICE03|L2026|02-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C9541",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C05941",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "10-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C1338",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C129",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "11-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C59618",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C88433",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "02-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_047.png",
+    "num_qr": 8,
+    "qrs": [
+      "C37630|JUICE03|L2025|09-2026",
+      "C7824|WATER02|L2024|02-2028",
+      "C20158|MILK01|L2026|09-2026",
+      "C2385|JUICE03|L2024|10-2026",
+      "C54544|MILK01|L2027|08-2025",
+      "C15358|MILK01|L2026|02-2025",
+      "C875|MILK01|L2027|05-2026",
+      "C8271|JUICE03|L2025|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C37630",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C7824",
+        "product_code": "WATER02",
+        "lot_batch": "L2024",
+        "expiry": "02-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C20158",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C2385",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "10-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C54544",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "08-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C15358",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "02-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C875",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C8271",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "04-2026",
+        "near_expiry": true
+      }
+    ]
+  },
+  {
+    "file": "image_048.png",
+    "num_qr": 4,
+    "qrs": [
+      "C040|MILK01|L2027|01-2026",
+      "C3094|JUICE03|L2026|05-2028",
+      "C90660|JUICE03|L2026|01-2028",
+      "C59050|WATER02|L2026|07-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C040",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "01-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C3094",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "05-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C90660",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "01-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C59050",
+        "product_code": "WATER02",
+        "lot_batch": "L2026",
+        "expiry": "07-2026",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_049.png",
+    "num_qr": 7,
+    "qrs": [
+      "C86415|JUICE03|L2025|02-2028",
+      "C943|MILK01|L2024|03-2027",
+      "C64585|WATER02|L2027|12-2025",
+      "C334|JUICE03|L2024|11-2025",
+      "C472|MILK01|L2024|09-2026",
+      "C92744|MILK01|L2026|10-2028",
+      "C5971|MILK01|L2027|07-2028"
+    ],
+    "details": [
+      {
+        "carton_id": "C86415",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "02-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C943",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "03-2027",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C64585",
+        "product_code": "WATER02",
+        "lot_batch": "L2027",
+        "expiry": "12-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C334",
+        "product_code": "JUICE03",
+        "lot_batch": "L2024",
+        "expiry": "11-2025",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C472",
+        "product_code": "MILK01",
+        "lot_batch": "L2024",
+        "expiry": "09-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C92744",
+        "product_code": "MILK01",
+        "lot_batch": "L2026",
+        "expiry": "10-2028",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5971",
+        "product_code": "MILK01",
+        "lot_batch": "L2027",
+        "expiry": "07-2028",
+        "near_expiry": false
+      }
+    ]
+  },
+  {
+    "file": "image_050.png",
+    "num_qr": 3,
+    "qrs": [
+      "C69675|JUICE03|L2026|03-2026",
+      "C5978|JUICE03|L2025|05-2026",
+      "C82842|JUICE03|L2026|04-2026"
+    ],
+    "details": [
+      {
+        "carton_id": "C69675",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "03-2026",
+        "near_expiry": false
+      },
+      {
+        "carton_id": "C5978",
+        "product_code": "JUICE03",
+        "lot_batch": "L2025",
+        "expiry": "05-2026",
+        "near_expiry": true
+      },
+      {
+        "carton_id": "C82842",
+        "product_code": "JUICE03",
+        "lot_batch": "L2026",
+        "expiry": "04-2026",
+        "near_expiry": false
+      }
+    ]
+  }
+]
