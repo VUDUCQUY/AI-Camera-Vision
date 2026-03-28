@@ -1,0 +1,9 @@
+# model
+*.pt
+
+# logs
+*.csv
+
+# system
+__pycache__/
+.ipynb_checkpoints/
