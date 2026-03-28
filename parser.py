@@ -9,6 +9,7 @@ Expiry in:  MM-YYYY   →  stored as YYYY_MM_DD (day forced to 01)
 import logging
 import re
 from dataclasses import dataclass
+from typing import Optional, Any
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +24,8 @@ class CartonData:
     product_code: str
     lot_batch: str
     expiry_date: str  # YYYY_MM_DD
+    is_exception: bool = False
+    raw_data: str = ""
 
 
 class QRParser:
@@ -44,13 +47,14 @@ class QRParser:
         parts = raw.strip().split(self.DELIMITER)
 
         if len(parts) != self.EXPECTED_FIELDS:
-            logger.error(
-                "Invalid QR format (expected %d fields, got %d): '%s'",
-                self.EXPECTED_FIELDS,
-                len(parts),
-                raw,
+            return CartonData(
+                carton_id="UNKNOWN",
+                product_code="UNKNOWN",
+                lot_batch="UNKNOWN",
+                expiry_date="UNKNOWN",
+                is_exception=True,
+                raw_data=raw
             )
-            return None
 
         carton_id, product_code, lot_batch, expiry_raw = (p.strip() for p in parts)
 
@@ -64,6 +68,8 @@ class QRParser:
             product_code=product_code,
             lot_batch=lot_batch,
             expiry_date=expiry_date,
+            is_exception=False,
+            raw_data=raw
         )
 
     # ------------------------------------------------------------------
