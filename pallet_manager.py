@@ -23,8 +23,8 @@ CONFIDENCE_SCORE = 1.0
 class PalletManager:
 
     def __init__(self) -> None:
-        self._carton_ids: list[str] = []          # ordered, unique
-        self._seen_ids: set[str] = set()           # fast dedup lookup
+        self._carton_ids: list[str] = []
+        self._seen_ids: set[str] = set()
         self._product_codes: list[str] = []
         self._lot_batches: list[str] = []
         self._expiry_dates: list[str] = []

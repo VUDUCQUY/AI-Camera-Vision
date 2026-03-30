@@ -102,3 +102,39 @@ class QRDecoder:
             return []
 
         return [s for s in decoded_list if s and s.strip()]
+
+    """Decode QR from numpy (from YOLO crop ) -update for yolo detect"""
+
+    def decode_array(self, img) -> List[str]:
+        """Decode QR from a numpy array (cropped region from YOLO bbox).
+
+        Tries colour → grayscale → upscaled, same as decode_image().
+        """
+        if img is None or img.size == 0:
+            logger.warning("decode_array received empty/None image")
+            return []
+
+        # Pass 1: colour
+        payloads = self._detect_all(img)
+
+        # Pass 2: grayscale
+        if not payloads:
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            payloads = self._detect_all(gray)
+
+        # Pass 3: upscale small crops (QR crops are often tiny)
+        if not payloads:
+            h, w = img.shape[:2]
+            if max(h, w) < 200:  # very small crop
+                scale = 400 / max(h, w)
+            elif max(h, w) < 800:
+                scale = 800 / max(h, w)
+            else:
+                scale = None
+
+            if scale:
+                big = cv2.resize(img, None, fx=scale, fy=scale,
+                                 interpolation=cv2.INTER_CUBIC)
+                payloads = self._detect_all(big)
+
+        return payloads
