@@ -1,0 +1,5 @@
+train: /content/drive/MyDrive/AI camera/QR/train/images
+val: /content/drive/MyDrive/AI camera/QR/test/images
+
+nc: 1
+names: ['qr']
