@@ -92,3 +92,4 @@ class QRParser:
             return None
         return f"{year}_{month}_01"
         #return f"2026_12_01"
+

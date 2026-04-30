@@ -1,10 +1,33 @@
 {
   "pallets": [
     {
-      "pallet_id": "SGL-20260328-ST01-8021",
+      "pallet_id": "SGL-20260428-ST01-8081",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
+        "C005",
+        "J001"
+      ],
+      "total_cartons": 2,
+      "product_code": "JUICE02",
+      "lot_batch": "L2026",
+      "min_expiry_date": "2026_11_01",
+      "scan_timestamp": "2026_04_28T17:22:29",
+      "camera_id": "CAM-STATION-01",
+      "confidence_score": 1.0,
+      "exceptions": [
+        "http://qr.ionlife.com.vn/es1wu2o8",
+        "00950178-1",
+        "http://qr.ionlife.com.vn/ZALOOA",
+        "01261999-1"
+      ]
+    },
+    {
+      "pallet_id": "SGL-20260428-ST01-7343",
+      "warehouse_code": "SGL",
+      "station": "ST01",
+      "carton_id": [
+        "C004",
         "C3746",
         "C405",
         "C5607",
@@ -66,8 +89,8 @@
         "C956",
         "C30951",
         "C520",
+        "C9283",
         "C9229",
-        "C004",
         "C268",
         "C408",
         "C535",
@@ -128,17 +151,22 @@
         "C472",
         "C5971"
       ],
-      "total_cartons": 122,
+      "total_cartons": 123,
       "product_code": "MILK01",
-      "lot_batch": "L2025",
+      "lot_batch": "L2026",
       "min_expiry_date": "2025_02_01",
-      "scan_timestamp": "2026_03_28T18:10:11",
+      "scan_timestamp": "2026_04_28T17:22:29",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
-      "exceptions": []
+      "exceptions": [
+        "http://qr.ionlife.com.vn/es1wu2o8",
+        "00950178-1",
+        "http://qr.ionlife.com.vn/ZALOOA",
+        "01261999-1"
+      ]
     },
     {
-      "pallet_id": "SGL-20260328-ST01-3367",
+      "pallet_id": "SGL-20260428-ST01-3701",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
@@ -246,26 +274,33 @@
         "C2110",
         "C73519",
         "C9541",
+        "C7824",
         "C59050",
         "C64585"
       ],
-      "total_cartons": 106,
+      "total_cartons": 107,
       "product_code": "WATER02",
       "lot_batch": "L2024",
       "min_expiry_date": "2025_01_01",
-      "scan_timestamp": "2026_03_28T18:10:11",
+      "scan_timestamp": "2026_04_28T17:22:29",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
-      "exceptions": []
+      "exceptions": [
+        "http://qr.ionlife.com.vn/es1wu2o8",
+        "00950178-1",
+        "http://qr.ionlife.com.vn/ZALOOA",
+        "01261999-1"
+      ]
     },
     {
-      "pallet_id": "SGL-20260328-ST01-8382",
+      "pallet_id": "SGL-20260428-ST01-5338",
       "warehouse_code": "SGL",
       "station": "ST01",
       "carton_id": [
         "C20849",
         "C8999",
         "C474",
+        "C3668",
         "C2205",
         "C301",
         "C46482",
@@ -322,6 +357,7 @@
         "C720",
         "C290",
         "C6593",
+        "C75662",
         "C85549",
         "C2540",
         "C976",
@@ -376,37 +412,30 @@
         "C69675",
         "C82842"
       ],
-      "total_cartons": 112,
+      "total_cartons": 114,
       "product_code": "JUICE03",
       "lot_batch": "L2026",
       "min_expiry_date": "2025_01_01",
-      "scan_timestamp": "2026_03_28T18:10:11",
+      "scan_timestamp": "2026_04_28T17:22:29",
       "camera_id": "CAM-STATION-01",
       "confidence_score": 1.0,
-      "exceptions": []
-    },
-    {
-      "pallet_id": "SGL-20260328-ST01-8636",
-      "warehouse_code": "SGL",
-      "station": "ST01",
-      "carton_id": [
-        "C005",
-        "J001"
-      ],
-      "total_cartons": 2,
-      "product_code": "JUICE02",
-      "lot_batch": "L2026",
-      "min_expiry_date": "2026_11_01",
-      "scan_timestamp": "2026_03_28T18:10:11",
-      "camera_id": "CAM-STATION-01",
-      "confidence_score": 1.0,
-      "exceptions": []
+      "exceptions": [
+        "http://qr.ionlife.com.vn/es1wu2o8",
+        "00950178-1",
+        "http://qr.ionlife.com.vn/ZALOOA",
+        "01261999-1"
+      ]
     }
   ],
-  "exceptions": [],
+  "exceptions": [
+    "http://qr.ionlife.com.vn/es1wu2o8",
+    "00950178-1",
+    "http://qr.ionlife.com.vn/ZALOOA",
+    "01261999-1"
+  ],
   "summary": {
     "total_pallets": 4,
-    "total_cartons": 342,
-    "total_exceptions": 0
+    "total_cartons": 346,
+    "total_exceptions": 4
   }
 }
