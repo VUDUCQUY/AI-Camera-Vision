@@ -211,6 +211,9 @@ test.json
 
 # model
 *.pt
+# model đang dùng + bản gốc phải có trong repo (Dockerfile COPY 2 file này)
+!weights/best_v2.pt
+!weights/best_v1_original.pt
 
 # logs
 *.csv
@@ -218,3 +221,15 @@ test.json
 # system
 __pycache__/
 .ipynb_checkpoints/
+# Dataset sinh ra bởi training/make_dataset.py
+training/data/
+training/runs/
+training/data_src/
+training/data_synth/
+
+# Video upload từ web app (tự xoá sau UPLOAD_TTL_HOURS)
+uploads/
+data/
+
+# Video > 100MB (GitHub từ chối) — giữ ở máy, không commit
+images/test/DJI_*.mp4

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Frontend — AI Camera Warehouse Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Giao diện React (Create React App) cho hệ thống quét QR pallet.
 
-## Available Scripts
+- `npm start` (dev): gọi backend tại `http://127.0.0.1:8000`.
+- `npm run build` (production): gọi **cùng origin**. Backend `wms_api.py` tự phục vụ thư mục `build/` tại `/`.
+- Ghi đè địa chỉ backend bằng biến `REACT_APP_API_BASE` (khai báo `API_BASE` trong `src/StepScan.jsx`).
 
-In the project directory, you can run:
+```bash
+npm install
+npm start        # http://localhost:3000
+npm run build    # bản production vào build/
+```
 
-### `npm start`
+## Luồng 3 bước
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Bước | Component | Việc |
+|---|---|---|
+| 1. Upload | `StepUpload.jsx` | Kéo thả ảnh (JPG/PNG/BMP/HEIC) hoặc video. HEIC được chuyển sang JPEG bằng `heic2any` |
+| 2. Scan | `StepScan.jsx` | Gọi `POST /process-image` lần lượt cho từng file. Hiện khung QR trên ảnh và bảng **QR CODES** gồm mọi mã đọc được |
+| 3. Finalize | `StepFinalize.jsx` | Danh sách mã đã quét. Bấm một mã sẽ mở ảnh bằng chứng, **khung của mã đó sáng vàng và có vòng "ping"**. Nút **XÁC NHẬN** kết thúc lượt quét |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Video
 
-### `npm test`
+- Video được upload **một lần** qua `POST /upload-video` ngay khi chọn file. Khi bấm quét, nếu upload chưa xong thì
+  frontend đợi, rồi chỉ gửi tên file (`server_filename`), không gửi lại cả video.
+- Màn hình quét dùng `<img src="/video-stream/…">` (MJPEG). Frame AI từ server đã vẽ sẵn khung YOLO, nên không vẽ
+  thêm overlay lên video. Mỗi lần bấm quét, stream tự kết nối lại (`streamKey`).
+- Ở bước 3, mã đọc từ video hiện đúng frame mà mã được đọc ra (`evidence` do API trả về).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Trạng thái giữa các bước (`App.js`)
 
-### `npm run build`
+`App.js` giữ `files`, `scanStore` (ảnh preview, boxes, evidence của từng file) và `codes` (`[{ code, src }]`).
+Bấm **BACK** từ bước 3 về bước 2 sẽ khôi phục kết quả lượt quét, không phải quét lại.
+Chọn file mới ở bước 1 hoặc bấm "＋ QUÉT MỚI" sẽ xoá hết.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Còn thiếu
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Nút **XÁC NHẬN** tạm thời chỉ đổi trạng thái giao diện (hiện "ĐÃ XÁC NHẬN N MÃ"), không lưu hay đồng bộ Google Sheets — người dùng không được báo điều này trên màn hình.
+  Khi cần lưu, gọi `POST /pallets` hoặc thêm API mới trong `StepFinalize.jsx`. `HistoryTable` hiện chưa có dữ liệu.

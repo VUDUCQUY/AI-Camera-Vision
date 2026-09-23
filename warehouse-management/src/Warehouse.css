@@ -402,6 +402,30 @@ body {
   display: block;
 }
 
+.upload-zone__preview-img--loading {
+  width: 110px; /* Cố định chiều rộng khi đang load */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-panel);
+  border-style: dashed;
+  color: var(--green-200);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--green-400);
+  border-top-color: var(--green-100);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .upload-zone__preview-label {
   position: absolute;
   bottom: 0;
@@ -534,7 +558,7 @@ body {
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 14px;
-  max-height: 220px;
+  max-height: 65vh;
   overflow-y: auto;
 }
 
@@ -685,8 +709,6 @@ body {
   border: 1px solid var(--border-bright);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  max-height: 200px;
-  overflow-y: auto;
   margin-bottom: 16px;
 }
 
@@ -865,6 +887,7 @@ body {
 .stepscan-layout {
   flex: 1;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   align-items: flex-start;
 }
@@ -875,6 +898,11 @@ body {
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+}
+
+/* Bảng mã QR: xuống hàng riêng, trải ngang hết bố cục */
+.stepscan-codes {
+  flex: 0 0 100%;
 }
 
 .stepscan-right {
@@ -896,12 +924,20 @@ body {
   box-shadow: 0 0 20px var(--green-400);
   display: inline-block;
   line-height: 0;
+  min-height: 300px; /* Thêm min-height để không bị sập khi chưa load ảnh */
+  min-width: 400px;
 }
 
 .scan-viewport__img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Bọc vừa khít ảnh để overlay SVG phủ đúng vùng ảnh */
+.scan-viewport__frame {
+  position: relative;
+  line-height: 0;
 }
 
 .scan-viewport__placeholder {
@@ -950,6 +986,17 @@ body {
 .results-table__row--wide {
   grid-template-columns: 40px 1fr 100px 110px 110px !important;
 }
+
+.finalize-table__header--codes,
+.finalize-table__row--codes,
+.results-table__header--codes,
+.results-table__row--codes {
+  grid-template-columns: 40px 1fr 1fr !important;
+  column-gap: 12px;
+}
+
+.results-table__code { color: var(--green-100); word-break: break-all; }
+.results-table__src  { color: var(--green-muted); font-size: 10px; word-break: break-all; }
 
 .scan-status--ok      { color: var(--green-100); font-size: 11px; }
 .scan-status--expired { color: var(--red);       font-size: 11px; }

@@ -1,6 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import heic2any from 'heic2any';
 
-const API_BASE = 'http://127.0.0.1:8000';
+// Production (npm run build): backend phục vụ luôn giao diện → gọi cùng origin ('').
+// Dev (npm start): backend chạy riêng ở cổng 8000. Ghi đè bằng biến REACT_APP_API_BASE nếu cần.
+const API_BASE = process.env.REACT_APP_API_BASE
+  ?? (process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8000' : '');
 
 // ── Bounding box overlay: Thêm fill="none" để không bị che ảnh ──
 function BoundingBoxOverlay({ boxes }) {
@@ -25,6 +29,9 @@ function BoundingBoxOverlay({ boxes }) {
         const polyPts = pts.map(p => p.join(',')).join(' ');
         const tlx = Math.min(...pts.map(p => p[0]));
         const tly = Math.min(...pts.map(p => p[1]));
+
+        const label = box.label || `QR ${i + 1}`;
+        const labelWidth = Math.max(0.12, label.length * 0.014 + 0.02);
 
         return (
           <g key={i} filter="url(#glow)">
@@ -55,9 +62,9 @@ function BoundingBoxOverlay({ boxes }) {
               );
             })}
 
-            <rect x={tlx} y={tly - 0.038} width={0.15} height={0.035} fill="rgba(0, 26, 10, 0.8)" rx="0.004" stroke="#00ff8866" strokeWidth="0.002" />
+            <rect x={tlx} y={tly - 0.038} width={labelWidth} height={0.035} fill="rgba(0, 26, 10, 0.8)" rx="0.004" stroke="#00ff8866" strokeWidth="0.002" />
             <text x={tlx + 0.005} y={tly - 0.012} fill="#00ff88" fontSize="0.022" fontFamily="monospace" fontWeight="bold">
-              {box.label || `QR ${i + 1}`}
+              {label}
             </text>
           </g>
         );
@@ -66,41 +73,71 @@ function BoundingBoxOverlay({ boxes }) {
   );
 }
 
-export default function StepScan({ files, onNext }) {
+export default function StepScan({ files, saved, onNext }) {
+  // Quay lại từ bước 3 (BACK) → dùng lại kết quả lượt quét trước thay vì bắt đầu trắng
+  const restored = useRef(Object.keys(saved?.scanStore || {}).length > 0);
+
   const [scanning, setScanning]       = useState(false);
-  const [progress, setProgress]       = useState(0);
-  const [results, setResults]         = useState([]);
-  const [done, setDone]               = useState(false);
+  const [progress, setProgress]       = useState(restored.current ? 100 : 0);
+  const [results, setResults]         = useState(restored.current ? saved.results : []);
+  const [codes, setCodes]             = useState(restored.current ? saved.codes : []); // mọi mã QR đọc được: [{ code, src }]
+  const [done, setDone]               = useState(restored.current);
 
   // STATE MỚI ĐỂ LƯU KẾT QUẢ TỪNG FILE
-  const [scanStore, setScanStore]     = useState({}); // { index: { boxes, previewUrl, pallets } }
+  const [scanStore, setScanStore]     = useState(restored.current ? saved.scanStore : {}); // { index: { boxes, previewUrl, pallets } }
   const [viewIndex, setViewIndex]     = useState(0);  // Đang hiển thị ảnh nào
+  const [streamKey, setStreamKey]     = useState(0);
+  const uploads = useRef(new Map());  // File → Promise<tên file trên server | null>  // đổi mỗi lần quét → <img> mở lại kết nối stream (nếu server vừa khởi động lại)
 
   useEffect(() => {
+    if (restored.current) return; // đã có kết quả, không tạo lại preview / upload lại video
     if (files.length) {
       const initialStore = {};
       files.forEach((file, i) => {
+        const isHeic = file.name.toLowerCase().endsWith('.heic') || file.name.toLowerCase().endsWith('.heif');
         initialStore[i] = {
-          previewUrl: URL.createObjectURL(file),
+          previewUrl: isHeic ? null : URL.createObjectURL(file),
+          isHeic: isHeic,
           boxes: [],
           pallets: []
         };
 
-        // Tự động upload video để có thể stream MJPEG ngay
-        if (file.type.startsWith('video/')) {
+        // Chuyển đổi HEIC nếu cần
+        if (isHeic) {
+          heic2any({ blob: file, toType: 'image/jpeg', quality: 0.6 })
+            .then(blob => {
+              const url = URL.createObjectURL(Array.isArray(blob) ? blob[0] : blob);
+              setScanStore(prev => ({
+                ...prev,
+                [i]: { ...prev[i], previewUrl: url }
+              }));
+            })
+            .catch(e => {
+              console.error("HEIC conversion error in StepScan:", e);
+              setScanStore(prev => ({
+                ...prev,
+                [i]: { ...prev[i], previewUrl: URL.createObjectURL(file) }
+              }));
+            });
+        }
+
+        // Tự động upload video để có thể stream MJPEG ngay.
+        // Mỗi file chỉ upload 1 lần (React dev chạy effect 2 lần → trước đây bị upload trùng).
+        if (file.type.startsWith('video/') && !uploads.current.has(file)) {
           const formData = new FormData();
           formData.append('file', file);
-          fetch(`${API_BASE}/upload-video`, { method: 'POST', body: formData })
+          const upload = fetch(`${API_BASE}/upload-video`, { method: 'POST', body: formData })
             .then(res => res.json())
             .then(data => {
-              if (data.status === 'ok') {
-                setScanStore(prev => ({
-                  ...prev,
-                  [i]: { ...prev[i], serverFilename: data.filename }
-                }));
-              }
+              if (data.status !== 'ok') return null;
+              setScanStore(prev => ({
+                ...prev,
+                [i]: { ...prev[i], serverFilename: data.filename }
+              }));
+              return data.filename;
             })
-            .catch(e => console.error("Auto-upload error:", e));
+            .catch(e => { console.error("Auto-upload error:", e); return null; });
+          uploads.current.set(file, upload);
         }
       });
       setScanStore(initialStore);
@@ -109,21 +146,31 @@ export default function StepScan({ files, onNext }) {
   }, [files]);
 
   const startScan = async () => {
+    setStreamKey(Date.now());
     setScanning(true);
     setResults([]);
+    setCodes([]);
     setProgress(0);
     setDone(false);
 
     const allPallets = [];
+    const allCodes = [];
 
     for (let i = 0; i < files.length; i++) {
       setViewIndex(i); // Nhảy view tới ảnh đang quét
       setProgress(Math.round((i / files.length) * 100));
 
       const formData = new FormData();
-      formData.append('file', files[i]);
-      if (files[i].type.startsWith('video/') && scanStore[i]?.serverFilename) {
-        formData.append('server_filename', scanStore[i].serverFilename);
+      // Video: đợi upload nền xong (nếu chưa xong) để quét ĐÚNG file mà màn hình đang stream
+      const serverFilename = files[i].type.startsWith('video/')
+        ? (scanStore[i]?.serverFilename || await uploads.current.get(files[i]))
+        : null;
+      if (serverFilename) {
+        // Video đã có sẵn trên server (/upload-video) → chỉ gửi tên, không upload lại cả file
+        formData.append('file', new Blob([]), files[i].name);
+        formData.append('server_filename', serverFilename);
+      } else {
+        formData.append('file', files[i]);
       }
 
       // Nếu là video, lấy nhanh thumbnail để hiện lên luôn
@@ -147,6 +194,8 @@ export default function StepScan({ files, onNext }) {
         if (data.status === 'ok') {
           const filePallets = data.pallets.map(p => ({ ...p, _src: files[i].name }));
           allPallets.push(...filePallets);
+          allCodes.push(...(data.codes || []).map(code => ({ code, src: files[i].name })));
+          setCodes([...allCodes]);
 
           // Cập nhật kho dữ liệu cho ảnh i
           setScanStore(prev => ({
@@ -154,6 +203,7 @@ export default function StepScan({ files, onNext }) {
             [i]: {
               ...prev[i],
               boxes: data.boxes || [],
+              evidence: data.evidence || {}, // video: frame mà từng mã được đọc ra
               pallets: filePallets,
               previews: data.previews ? data.previews.map(p => `data:image/jpeg;base64,${p}`) : [],
               slideshowIndex: 0
@@ -193,8 +243,6 @@ export default function StepScan({ files, onNext }) {
     return () => clearInterval(interval);
   }, [done, viewIndex, previewsCount]);
 
-  const today      = new Date().toISOString().slice(0, 10);
-
   // Lấy dữ liệu của ảnh đang được chọn để hiển thị
   const currentView = scanStore[viewIndex] || {};
 
@@ -207,23 +255,29 @@ export default function StepScan({ files, onNext }) {
               {files[viewIndex]?.type.startsWith('video/') ? (
                 // Chỉ hiện stream nếu server báo đã nhận file xong (để tránh lỗi 404/ảnh vỡ)
                 currentView.serverFilename ? (
-                  <img 
-                    src={`${API_BASE}/video-stream/${currentView.serverFilename}`} 
-                    alt="video stream" 
-                    className="scan-viewport__img" 
-                  />
+                  <div className="scan-viewport__frame">
+                    {/* Frame AI từ server đã vẽ sẵn khung YOLO đúng vị trí → không phủ overlay
+                        (overlay gộp box của nhiều frame khác nhau, camera di chuyển sẽ lệch) */}
+                    <img
+                      key={streamKey}
+                      src={`${API_BASE}/video-stream/${currentView.serverFilename}?t=${streamKey}`}
+                      alt="video stream"
+                      className="scan-viewport__img"
+                    />
+                  </div>
                 ) : (
                   <div className="scan-viewport__loading-video" style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
                     <div className="spinner" style={{ border: '3px solid #333', borderTop: '3px solid #00ff88', borderRadius: '50%', width: '30px', height: '30px', animation: 'spin 1s linear infinite', marginRight: '10px' }} />
-                    <span style={{ color: '#00ff88' }}>PREPARING VIDEO STREAM...</span>
+                    <span style={{ color: '#00ff88', lineHeight: 'normal', whiteSpace: 'nowrap' }}>PREPARING VIDEO STREAM...</span>
                   </div>
                 )
               ) : (
-                <img src={currentView.previewUrl} alt="scan" className="scan-viewport__img" />
+                // Khung bọc vừa khít ảnh → toạ độ box (0..1) khớp đúng ảnh, không lệch sang phần nền đen
+                <div className="scan-viewport__frame">
+                  <img src={currentView.previewUrl} alt="scan" className="scan-viewport__img" />
+                  <BoundingBoxOverlay boxes={currentView.boxes} />
+                </div>
               )}
-
-              {/* Chỉ hiện khung khi đã quét xong file đó hoặc đã quét xong toàn bộ */}
-              <BoundingBoxOverlay boxes={currentView.boxes} />
 
               {scanning && viewIndex === Math.floor((progress / 100) * files.length) && (
                 <div className="scan-viewport__scanline-wrap" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
@@ -233,7 +287,7 @@ export default function StepScan({ files, onNext }) {
                   {files[viewIndex]?.type.startsWith('video/') && (
                     <div className="scan-viewport__loading-video-mini" style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.6)', padding: '8px 20px', borderRadius: '30px', display: 'flex', alignItems: 'center', border: '1px solid #00ff8844', backdropFilter: 'blur(4px)' }}>
                       <div className="spinner-mini" style={{ border: '2px solid #333', borderTop: '2px solid #00ff88', borderRadius: '50%', width: '16px', height: '16px', animation: 'spin 1s linear infinite', marginRight: '10px' }} />
-                      <span style={{ color: '#00ff88', fontSize: '12px', fontWeight: 'bold', letterSpacing: '1px' }}>AI SCANNING VIDEO...</span>
+                      <span style={{ color: '#00ff88', fontSize: '12px', fontWeight: 'bold', letterSpacing: '1px', lineHeight: 'normal', whiteSpace: 'nowrap' }}>AI SCANNING VIDEO...</span>
                     </div>
                   )}
                 </div>
@@ -244,31 +298,17 @@ export default function StepScan({ files, onNext }) {
               </div>
             </>
           ) : (
-            <div className="scan-viewport__placeholder">NO IMAGE LOADED</div>
+            <div className="scan-viewport__placeholder">
+              {currentView.isHeic ? (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <div className="spinner" style={{ marginBottom: '10px' }}></div>
+                  <span>PREPARING HEIC IMAGE...</span>
+                </div>
+              ) : "NO IMAGE LOADED"}
+            </div>
           )}
         </div>
 
-        <div className="results-table">
-          <div className="results-table__header results-table__header--wide">
-            <span>STT</span><span>CODE</span><span>PRODUCT</span><span>EXPIRY</span><span>STATUS</span>
-          </div>
-
-          {results.length === 0 ? (
-            <div className="results-table__empty">
-              {scanning ? '⟳ PROCESSING...' : 'No data available.'}
-            </div>
-          ) : results.map((p, i) => (
-            <div key={i} className="results-table__row results-table__row--wide">
-              <span className="results-table__num">{i + 1}</span>
-              <span style={{ color: 'var(--green-100)', fontSize: 10 }}>{p.pallet_id}</span>
-              <span>{p.product_code}</span>
-              <span style={{ color: p.min_expiry_date < today ? 'var(--red)' : 'inherit' }}>{p.min_expiry_date}</span>
-              <span className={p.min_expiry_date < today ? 'scan-status--expired' : 'scan-status--ok'}>
-                {p.min_expiry_date < today ? 'EXPIRED' : 'OK'}
-              </span>
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="stepscan-right">
@@ -302,10 +342,28 @@ export default function StepScan({ files, onNext }) {
           ) : (
             <>
               <button className="btn-scan-action btn-scan-action--secondary" onClick={startScan}>↺ RESCAN</button>
-              <button className="btn-scan-action btn-scan-action--primary" onClick={() => onNext(results, scanStore)}>FINALIZE</button>
+              <button className="btn-scan-action btn-scan-action--primary" onClick={() => onNext(results, scanStore, codes)}>FINALIZE</button>
             </>
           )}
         </div>
+      </div>
+
+      <div className="results-table stepscan-codes">
+        <div className="results-table__header results-table__header--codes">
+          <span>STT</span><span>QR CODE ({codes.length})</span><span>FILE</span>
+        </div>
+
+        {codes.length === 0 ? (
+          <div className="results-table__empty">
+            {scanning ? '⟳ PROCESSING...' : 'No QR decoded.'}
+          </div>
+        ) : codes.map((c, i) => (
+          <div key={i} className="results-table__row results-table__row--codes">
+            <span className="results-table__num">{i + 1}</span>
+            <span className="results-table__code">{c.code}</span>
+            <span className="results-table__src">{c.src}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

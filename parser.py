@@ -9,7 +9,6 @@ Expiry in:  MM-YYYY   →  stored as YYYY_MM_DD (day forced to 01)
 import logging
 import re
 from dataclasses import dataclass
-from typing import Optional, Any
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +31,6 @@ class QRParser:
     """Parses a raw QR string into a CartonData instance."""
 
     DELIMITER = "|"
-    #DELIMITER = "-"
     EXPECTED_FIELDS = 4
 
     def parse(self, raw: str) -> CartonData | None:
@@ -91,5 +89,4 @@ class QRParser:
         if not (1 <= int(month) <= 12):
             return None
         return f"{year}_{month}_01"
-        #return f"2026_12_01"
 

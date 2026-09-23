@@ -1,0 +1,24 @@
+# Chỉ đưa vào image những gì cần để chạy (xem Dockerfile)
+.git
+.idea
+.vscode
+**/__pycache__
+**/*.pyc
+
+# dữ liệu / ảnh test / video — không cần trong image
+images/
+uploads/
+data/
+runs/
+qr/
+output.json
+training/
+
+# secret — gắn vào lúc chạy bằng volume, KHÔNG build vào image
+test.json
+.env
+*.pem
+
+# frontend: build lại trong stage node
+warehouse-management/node_modules
+warehouse-management/build

@@ -83,8 +83,8 @@ def process_folder(folder: Path, decoder: QRDecoder, parser: QRParser, pallet: P
             elif added == "DUPLICATE":
                 print(f"    ↩  Dup     → {carton.carton_id} (skipped)")
 
-            elif added == "REJECT":
-                print(f"    ✗  Reject  → {carton.carton_id} (invalid)")
+            elif added == "EXCEPTION":  # QR đọc được nhưng sai định dạng carton_id|product|lot|MM-YYYY
+                print(f"    ✗  Sai định dạng → '{carton.raw_data}'")
 
     print()
     print(f"  {pallet.summary()}")

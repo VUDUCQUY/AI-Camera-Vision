@@ -11,12 +11,12 @@ export default function App() {
   const [step,    setStep]      = useState(0);
   const [files,   setFiles]     = useState([]);
   const [pallets, setPallets]   = useState([]);
+  const [codes,   setCodes]     = useState([]); // mã QR đã quét: [{ code, src }]
   const [history, setHistory]   = useState([]);
 
   // 🆕 Kho lưu trữ dữ liệu quét (ảnh preview + boxes)
   const [scanStore, setScanStore] = useState({});
 
-  const addHistory   = (entry) => setHistory(prev => [entry, ...prev]);
   const clearHistory = () => setHistory([]);
 
   // Hàm reset để quét đợt mới
@@ -24,6 +24,7 @@ export default function App() {
     setStep(0);
     setFiles([]);
     setPallets([]);
+    setCodes([]);
     setScanStore({}); // Xóa sạch kho khi quét mới
   };
 
@@ -38,15 +39,17 @@ export default function App() {
           <div className="main-area">
             {/* BƯỚC 1: UPLOAD */}
             {step === 0 && (
-              <StepUpload onNext={(f) => { setFiles(f); setStep(1); }} />
+              <StepUpload onNext={(f) => { setFiles(f); setPallets([]); setCodes([]); setScanStore({}); setStep(1); }} />
             )}
 
-            {/* BƯỚC 2: SCAN - Thêm setScanStore để lưu dữ liệu quét */}
+            {/* BƯỚC 2: SCAN - saved: khôi phục kết quả khi bấm BACK từ bước 3 */}
             {step === 1 && (
               <StepScan
                 files={files}
-                onNext={(r, finalStore) => {
+                saved={{ results: pallets, scanStore, codes }}
+                onNext={(r, finalStore, scannedCodes) => {
                   setPallets(r);
+                  setCodes(scannedCodes || []);
                   if(finalStore) setScanStore(finalStore); // Lưu lại kho dữ liệu
                   setStep(2);
                 }}
@@ -56,10 +59,9 @@ export default function App() {
             {/* BƯỚC 3: FINALIZE - Truyền files và scanStore vào để click hiện ảnh */}
             {step === 2 && (
               <StepFinalize
-                pallets={pallets}
+                codes={codes}
                 files={files}
                 scanStore={scanStore}
-                onSynced={addHistory}
                 onNewScan={resetAll}
               />
             )}

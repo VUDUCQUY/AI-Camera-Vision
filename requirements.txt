@@ -1,8 +1,25 @@
 # QR Warehouse Palletizing System — Python dependencies
+# Version đã kiểm thử trên Python 3.11. torch/torchvision (kéo theo bởi ultralytics) nên cài bản CPU trước
+# khi deploy không có GPU:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
-# Core QR detection (OpenCV built-in decoder — no system DLL required)
-opencv-python>=4.8.0
+# Thị giác máy tính + giải mã QR
+opencv-python==5.0.0.93     # thay bằng opencv-contrib-python nếu muốn bật WeChat QR (tuỳ chọn)
+numpy==2.4.6
+zxing-cpp==3.1.1            # bộ giải mã QR chính
+ultralytics==8.4.160        # YOLOv8 phát hiện vùng QR
 
-# Test image generation (only needed for generate_test_images.py)
-qrcode[pil]>=7.4
-numpy>=1.24
+# Backend API
+fastapi==0.141.1
+uvicorn==0.52.3
+python-multipart==0.0.32    # FastAPI nhận file upload
+pydantic==2.13.4
+
+# Đồng bộ Google Sheets
+gspread==6.2.1
+oauth2client==4.1.3
+
+# CLI main.py → gửi pallet lên API
+requests==2.34.2
+
+# Train lại YOLO (training/make_dataset.py) — không cần để chạy hệ thống
+qrcode[pil]==8.2

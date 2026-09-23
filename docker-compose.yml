@@ -1,0 +1,17 @@
+# docker compose up -d --build     → http://<máy-chủ>:8000
+services:
+  wms:
+    build: .
+    image: wms-qr-scanner
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:                      # sao chép .env.example → .env rồi sửa
+      - path: .env
+        required: false
+    environment:
+      WMS_GOOGLE_CREDS: /run/secrets/google_creds.json
+    volumes:
+      - ./uploads:/app/uploads     # video upload (tự xoá sau WMS_UPLOAD_TTL_HOURS)
+      - ./data:/app/data           # output.json
+      - ./test.json:/run/secrets/google_creds.json:ro   # service account Google Sheets (bỏ dòng này nếu không dùng)

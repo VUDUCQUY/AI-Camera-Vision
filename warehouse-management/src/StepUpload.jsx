@@ -1,17 +1,75 @@
 import { useState, useRef } from 'react';
 import ScanOverLay from './ScanOverLay';
+import heic2any from 'heic2any';
 
 export default function StepUpload({ onNext }) {
-  const [files, setFiles] = useState([]);
-  const [previews, setPreviews] = useState([]);
+  const [items, setItems] = useState([]); // [{ file, preview, isHeic, loading }]
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef();
 
-  const addFiles = (newFiles) => {
-    const arr = Array.from(newFiles).filter(f => f.type.startsWith('image/') || f.type.startsWith('video/'));
-    if (!arr.length) return;
-    setFiles(arr);
-    setPreviews(arr.map(f => URL.createObjectURL(f)));
+  const addFiles = async (newFiles) => {
+    const rawFiles = Array.from(newFiles);
+    const validFiles = rawFiles.filter(f => {
+      const ext = f.name.toLowerCase().split('.').pop();
+      const isHeicExt = ['heic', 'heif'].includes(ext);
+      return f.type.startsWith('image/') || f.type.startsWith('video/') || isHeicExt;
+    });
+
+    if (!validFiles.length) return;
+
+    // Tạo các entry mới
+    const newItems = validFiles.map(file => {
+      const ext = file.name.toLowerCase().split('.').pop();
+      const isHeic = ['heic', 'heif'].includes(ext);
+      return {
+        file,
+        preview: isHeic ? 'LOADING' : URL.createObjectURL(file),
+        isHeic,
+        loading: isHeic
+      };
+    });
+
+    setItems(newItems);
+
+    // Chuyển đổi HEIC không đồng bộ
+    newItems.forEach(async (item, index) => {
+      if (item.isHeic) {
+        try {
+          // Kiểm tra heic2any có tồn tại không (phòng hờ lỗi import)
+          const converter = typeof heic2any === 'function' ? heic2any : (heic2any?.default || null);
+          
+          if (!converter) {
+            throw new Error("heic2any not found");
+          }
+
+          const blob = await converter({
+            blob: item.file,
+            toType: 'image/jpeg',
+            quality: 0.5
+          });
+          
+          const convertedBlob = Array.isArray(blob) ? blob[0] : blob;
+          const url = URL.createObjectURL(convertedBlob);
+          
+          setItems(prev => {
+            const next = [...prev];
+            if (next[index]) {
+              next[index] = { ...next[index], preview: url, loading: false };
+            }
+            return next;
+          });
+        } catch (e) {
+          console.error("HEIC error:", e);
+          setItems(prev => {
+            const next = [...prev];
+            if (next[index]) {
+              next[index] = { ...next[index], preview: URL.createObjectURL(item.file), loading: false };
+            }
+            return next;
+          });
+        }
+      }
+    });
   };
 
   const onDrop = (e) => {
@@ -22,15 +80,25 @@ export default function StepUpload({ onNext }) {
 
   const handleClear = (e) => {
     e.stopPropagation();
-    setFiles([]);
-    setPreviews([]);
+    // Revoke URLs to avoid memory leaks
+    items.forEach(item => {
+      if (item.preview && item.preview.startsWith('blob:')) {
+        URL.revokeObjectURL(item.preview);
+      }
+    });
+    setItems([]);
   };
 
   const zoneClass = [
     'upload-zone',
     dragging ? 'upload-zone--dragging' : '',
-    files.length ? 'upload-zone--has-files' : '',
+    items.length ? 'upload-zone--has-files' : '',
   ].filter(Boolean).join(' ');
+
+  const handleNext = () => {
+    if (!items.length) return;
+    onNext(items.map(it => it.file));
+  };
 
   return (
     <div style={{ flex: 1 }}>
@@ -39,11 +107,11 @@ export default function StepUpload({ onNext }) {
         onDrop={onDrop}
         onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
         onDragLeave={() => setDragging(false)}
-        onClick={() => !files.length && inputRef.current.click()}
+        onClick={() => !items.length && inputRef.current.click()}
       >
         <ScanOverLay active={dragging} />
 
-        {!files.length ? (
+        {!items.length ? (
           <div className="upload-zone__empty">
             <div className="upload-zone__icon">📦</div>
             <div className="upload-zone__title">DRAG AND DROP</div>
@@ -51,14 +119,19 @@ export default function StepUpload({ onNext }) {
           </div>
         ) : (
           <>
-            {previews.map((url, i) => (
+            {items.map((item, i) => (
               <div key={i} className="upload-zone__preview">
-                {files[i]?.type.startsWith('video/') ? (
-                  <video src={url} className="upload-zone__preview-img" muted />
+                {item.preview === 'LOADING' ? (
+                  <div className="upload-zone__preview-img upload-zone__preview-img--loading">
+                    <div className="spinner"></div>
+                    <span style={{ fontSize: '9px', marginTop: '4px' }}>CONVERTING...</span>
+                  </div>
+                ) : item.file?.type.startsWith('video/') ? (
+                  <video src={item.preview} className="upload-zone__preview-img" muted />
                 ) : (
-                  <img src={url} alt="" className="upload-zone__preview-img" />
+                  <img src={item.preview} alt="" className="upload-zone__preview-img" />
                 )}
-                <div className="upload-zone__preview-label">{files[i]?.name}</div>
+                <div className="upload-zone__preview-label">{item.file?.name}</div>
               </div>
             ))}
             <button className="btn-clear" onClick={handleClear}>✕ CLEAR</button>
@@ -70,7 +143,7 @@ export default function StepUpload({ onNext }) {
         ref={inputRef}
         type="file"
         multiple
-        accept="image/*,video/*"
+        accept="image/*,video/*,.heic,.heif"
         hidden
         onChange={e => addFiles(e.target.files)}
       />
@@ -80,17 +153,17 @@ export default function StepUpload({ onNext }) {
           className="btn-browse"
           onClick={() => inputRef.current.click()}
         >
-          {files.length ? `CHANGE FILES (${files.length})` : 'BROWSE FILES'}
+          {items.length ? `CHANGE FILES (${items.length})` : 'BROWSE FILES'}
         </button>
 
         <button
-          className={`btn-next ${files.length ? 'btn-next--enabled' : 'btn-next--disabled'}`}
-          onClick={() => files.length && onNext(files)}
-          disabled={!files.length}
+          className={`btn-next ${items.length ? 'btn-next--enabled' : 'btn-next--disabled'}`}
+          onClick={handleNext}
+          disabled={!items.length}
         >
           NEXT: START SCAN →
         </button>
       </div>
     </div>
   );
-}
+}
