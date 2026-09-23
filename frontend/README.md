@@ -3,7 +3,7 @@
 Giao diện React (Create React App) cho hệ thống quét QR pallet.
 
 - `npm start` (dev): gọi backend tại `http://127.0.0.1:8000`.
-- `npm run build` (production): gọi **cùng origin**. Backend `wms_api.py` tự phục vụ thư mục `build/` tại `/`.
+- `npm run build` (production): gọi **cùng origin**. Backend `backend/api.py` tự phục vụ thư mục `build/` tại `/`.
 - Ghi đè địa chỉ backend bằng biến `REACT_APP_API_BASE` (khai báo `API_BASE` trong `src/StepScan.jsx`).
 
 ```bash

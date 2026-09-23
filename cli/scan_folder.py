@@ -1,10 +1,10 @@
 """
-main.py
-Entry point for the QR-based warehouse palletizing system.
+cli/scan_folder.py
+Quét cả thư mục ảnh offline: giải mã QR → gom pallet → xuất JSON → gửi lên WMS API (nếu đang chạy).
 
-Usage:
-    python main.py --folder ./images
-    python main.py --folder ./images --output output.json --log-level DEBUG
+Chạy từ thư mục gốc dự án:
+    python -m cli.scan_folder --folder ./images/clean
+    python -m cli.scan_folder --folder ./images/clean --output data/output.json --log-level DEBUG
 """
 
 import argparse
@@ -15,10 +15,10 @@ from pathlib import Path
 
 
 # ── Local modules ──────────────────────────────────────────────────────────────
-from decoder import QRDecoder
-from pallet_manager import PalletManager
-from parser import QRParser
-from utils import configure_logging, print_banner, print_section, wait_for_space
+from backend.decoder import QRDecoder
+from backend.pallet_manager import PalletManager
+from backend.qr_parser import QRParser
+from cli.console import configure_logging, print_banner, print_section, wait_for_space
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument(
         "--output",
         type=str,
-        default="output.json",
+        default="data/output.json",
         help="Path for the output JSON file.",
     )
     ap.add_argument(
@@ -124,7 +124,7 @@ def main() -> None:
 
     # ── WMS API — gửi tất cả pallet cùng lúc, mỗi pallet 1 row trên Sheets ──
     try:
-        from wms_api_client import WMSApiClient
+        from cli.wms_client import WMSApiClient
         api = WMSApiClient("http://localhost:8000")
         api.send_pallets(payloads)
         print(f"  → Sent {len(payloads)} pallet(s) to WMS API")

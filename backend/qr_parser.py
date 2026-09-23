@@ -1,5 +1,5 @@
 """
-parser.py
+backend/qr_parser.py
 Parses raw QR string payloads into structured CartonData objects.
 
 QR format:  carton_id|product_code|lot_batch|expiry

@@ -36,7 +36,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 from ultralytics import YOLO  # noqa: E402
-from decoder import QRDecoder  # noqa: E402
+from backend.decoder import QRDecoder  # noqa: E402
 
 OUT = ROOT / "training" / "data"
 TILE = 640
@@ -105,7 +105,7 @@ def tiles_with_boxes(img, boxes, n_tiles):
 
 
 # ------------------------------------------------------------------ nhãn tự động cho ảnh thật
-yolo = YOLO("weights/best.pt")
+yolo = YOLO("weights/best_v1_original.pt")  # model gốc gán nhãn tự động
 decoder = QRDecoder()
 
 

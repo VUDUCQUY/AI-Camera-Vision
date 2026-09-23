@@ -1,5 +1,5 @@
 """
-pallet_manager.py
+backend/pallet_manager.py
 Core pallet grouping, deduplication, business-rule validation, and JSON generation.
 """
 import json
@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 
-from parser import CartonData
+from .qr_parser import CartonData
 
 logger = logging.getLogger(__name__)
 

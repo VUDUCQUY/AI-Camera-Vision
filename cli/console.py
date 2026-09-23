@@ -1,6 +1,6 @@
 """
-utils.py
-Shared utility helpers.
+cli/console.py
+Tiện ích console cho CLI: logging, banner, chờ phím SPACE.
 """
 
 import logging
@@ -11,7 +11,7 @@ import sys
 def configure_logging(level: int = logging.INFO) -> None:
     """
     Set up a clean console logger for the whole application.
-    Call once at program start from main.py.
+    Call once at program start from cli/scan_folder.py.
     """
     fmt = "%(asctime)s [%(levelname)-8s] %(name)s — %(message)s"
     date_fmt = "%H:%M:%S"

@@ -20,5 +20,10 @@ test.json
 *.pem
 
 # frontend: build lại trong stage node
-warehouse-management/node_modules
-warehouse-management/build
+frontend/node_modules
+frontend/build
+
+# không cần để chạy server
+cli/
+docs/
+*.md

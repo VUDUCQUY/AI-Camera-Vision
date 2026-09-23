@@ -229,6 +229,8 @@ training/data_synth/
 
 # Video upload từ web app (tự xoá sau UPLOAD_TTL_HOURS)
 uploads/
+# Kết quả CLI / API (sinh ra khi chạy)
+output.json
 data/
 
 # Video > 100MB (GitHub từ chối) — giữ ở máy, không commit

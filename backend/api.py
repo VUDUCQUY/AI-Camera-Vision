@@ -1,8 +1,8 @@
 """
-wms_api.py
+backend/api.py
 API cho hệ thống quét pallet: nhận ảnh/video → YOLO tìm vùng QR → giải mã → gom pallet → Google Sheets.
 
-Chạy:  python -m uvicorn wms_api:app --host 127.0.0.1 --port 8000
+Chạy (từ thư mục gốc dự án):  python -m uvicorn backend.api:app --host 127.0.0.1 --port 8000
 Routes:
   POST /process-image   ảnh hoặc video → boxes, codes, pallets, previews, evidence
   POST /upload-video    lưu video để xem trước / quét (trả về tên file trên server)
@@ -10,7 +10,7 @@ Routes:
   POST /get-thumbnail   frame đầu tiên của video
   POST /pallets         đồng bộ pallet lên Google Sheets
   GET  /health          kiểm tra server (không cần đăng nhập)
-  /                     giao diện React (nếu đã build warehouse-management/build)
+  /                     giao diện React (nếu đã build frontend/build)
 
 Cấu hình qua biến môi trường (xem .env.example): WMS_BASIC_AUTH, WMS_CORS_ORIGINS, WMS_MAX_UPLOAD_MB,
 WMS_GOOGLE_CREDS, WMS_SHEET_NAME, WMS_YOLO_WEIGHTS, WMS_UPLOAD_DIR, WMS_DATA_DIR, WMS_UPLOAD_TTL_HOURS.
@@ -39,12 +39,12 @@ from oauth2client.service_account import ServiceAccountCredentials
 from pydantic import BaseModel
 from ultralytics import YOLO
 
-from decoder import QRDecoder
-from pallet_manager import PalletManager
-from parser import QRParser
+from .decoder import QRDecoder
+from .pallet_manager import PalletManager
+from .qr_parser import QRParser
 
 # ============================================================== CẤU HÌNH
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc dự án
 
 
 def _env(name: str, default: str) -> str:
@@ -61,7 +61,7 @@ CORS_ORIGINS = [o.strip() for o in _env("WMS_CORS_ORIGINS", "*").split(",") if o
 GOOGLE_CREDS = _env("WMS_GOOGLE_CREDS", os.path.join(BASE_DIR, "test.json"))  # service account (không commit!)
 SHEET_NAME = _env("WMS_SHEET_NAME", "WMS_Pallet")
 YOLO_WEIGHTS = _env("WMS_YOLO_WEIGHTS", os.path.join(BASE_DIR, "weights", "best_v2.pt"))  # gốc: best_v1_original.pt
-FRONTEND_DIR = os.path.join(BASE_DIR, "warehouse-management", "build")   # `npm run build` → phục vụ tại "/"
+FRONTEND_DIR = os.path.join(BASE_DIR, "frontend", "build")   # `npm run build` → phục vụ tại "/"
 
 VIDEO_EXTS = (".mp4", ".avi", ".mov", ".mkv", ".webm")
 

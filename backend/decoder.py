@@ -1,5 +1,5 @@
 """
-decoder.py
+backend/decoder.py
 Giải mã QR nhiều tầng cho crop do YOLO cắt ra (hoặc cả ảnh), dừng ngay khi đọc được:
 
   1. zxing-cpp trên ảnh xám gốc                     ~2ms — đa số crop xong ở đây
@@ -49,7 +49,7 @@ except ImportError:
     logger.warning("Chưa cài zxing-cpp (pip install zxing-cpp) — chỉ dùng OpenCV")
 
 # Phụ: WeChat QR (CNN + super-resolution), cần opencv-contrib + model
-_WECHAT_DIR = Path(__file__).parent / "weights" / "wechat"
+_WECHAT_DIR = Path(__file__).resolve().parents[1] / "weights" / "wechat"
 
 
 def _make_wechat():

@@ -1,9 +1,9 @@
 # ---------- 1) Build giao diện React ----------
 FROM node:22-alpine AS frontend
 WORKDIR /fe
-COPY warehouse-management/package.json warehouse-management/package-lock.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci --no-audit --no-fund
-COPY warehouse-management/ ./
+COPY frontend/ ./
 RUN CI=true npm run build
 
 # ---------- 2) Backend Python (CPU) ----------
@@ -20,9 +20,9 @@ RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/c
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY *.py ./
+COPY backend/ backend/
 COPY weights/best_v2.pt weights/best_v1_original.pt weights/
-COPY --from=frontend /fe/build warehouse-management/build
+COPY --from=frontend /fe/build frontend/build
 
 # Chạy bằng user thường, dữ liệu ghi vào /app/uploads và /app/data (gắn volume)
 RUN useradd --create-home app && mkdir -p uploads data && chown -R app:app /app
@@ -32,4 +32,4 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=60s \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')" || exit 1
 # 1 worker: model YOLO + bộ đệm frame stream nằm trong RAM của process
-CMD ["python", "-m", "uvicorn", "wms_api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+CMD ["python", "-m", "uvicorn", "backend.api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]

@@ -1,9 +1,9 @@
 """
 train.py
-Fine-tune YOLOv8 phát hiện QR (weights/best.pt) trên dataset của make_dataset.py.
+Fine-tune YOLOv8 phát hiện QR (weights/best_v1_original.pt) trên dataset của make_dataset.py.
 
-Chạy:  python training/train.py --epochs 12        (mặc định: fine-tune weights/best.pt, freeze 10 layer, lr 0.001)
-Kết quả: training/runs/<name>/weights/best.pt  (so sánh bằng training/compare.py trước khi thay weights/best.pt)
+Chạy:  python training/train.py --epochs 12        (mặc định: fine-tune weights/best_v1_original.pt, freeze 10 layer, lr 0.001)
+Kết quả: training/runs/<name>/weights/best.pt  (so sánh bằng training/compare.py trước khi thay YOLO_WEIGHTS)
 """
 import argparse
 import os
@@ -17,7 +17,7 @@ os.chdir(ROOT)
 ap = argparse.ArgumentParser()
 ap.add_argument("--epochs", type=int, default=25)
 ap.add_argument("--batch", type=int, default=16)
-ap.add_argument("--base", default="weights/best.pt", help="model gốc để fine-tune")
+ap.add_argument("--base", default="weights/best_v1_original.pt", help="model gốc để fine-tune")
 ap.add_argument("--name", default="finetune_v2")
 ap.add_argument("--freeze", type=int, default=10, help="đóng băng N layer đầu (backbone) → giữ kiến thức của model gốc")
 ap.add_argument("--lr0", type=float, default=0.001)

@@ -5,7 +5,7 @@ So sánh 2 model YOLO end-to-end (YOLO + decoder) trên ảnh test + ảnh kho:
     các ảnh real_dataN_* là cùng một cảnh nên có chung bộ mã)
   - tổng số box, số box rác (không đọc được mã), thời gian
 
-Chạy:  python training/compare.py weights/best.pt training/runs/finetune/weights/best.pt
+Chạy:  python training/compare.py weights/best_v1_original.pt weights/best_v2.pt
 """
 import glob
 import os
@@ -22,7 +22,7 @@ os.chdir(ROOT)
 import cv2  # noqa: E402
 import numpy as np  # noqa: E402
 from ultralytics import YOLO  # noqa: E402
-from decoder import QRDecoder  # noqa: E402
+from backend.decoder import QRDecoder  # noqa: E402
 
 CONF, IMGSZ, PAD = 0.5, 1280, 40
 dec = QRDecoder()

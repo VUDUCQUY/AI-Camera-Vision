@@ -1,7 +1,9 @@
 # Hướng dẫn cài đặt & chạy
 
-Hệ thống gồm 3 phần: **backend API** (`wms_api.py`), **frontend React** (`warehouse-management/`) và **CLI** quét thư mục ảnh (`main.py`).
-Tổng quan kiến trúc xem [README.md](README.md). Host lên server (Docker, HTTPS, đăng nhập) xem [DEPLOY.md](DEPLOY.md).
+Hệ thống gồm 3 phần: **backend API** (`backend/`), **frontend React** (`frontend/`) và **CLI** quét thư mục ảnh (`cli/`).
+Tổng quan kiến trúc xem [README.md](../README.md). Host lên server (Docker, HTTPS, đăng nhập) xem [DEPLOY.md](DEPLOY.md).
+
+Mọi lệnh dưới đây chạy từ **thư mục gốc dự án**.
 
 ---
 
@@ -27,7 +29,7 @@ Không có thì decoder tự bỏ qua bước này.
 ### Node.js (frontend)
 
 ```bash
-cd warehouse-management
+cd frontend
 npm install
 ```
 
@@ -38,7 +40,7 @@ npm install
 ### Backend (port 8000)
 
 ```bash
-python -m uvicorn wms_api:app --host 127.0.0.1 --port 8000
+python -m uvicorn backend.api:app --host 127.0.0.1 --port 8000
 ```
 
 Kiểm tra: mở http://127.0.0.1:8000/docs.
@@ -49,7 +51,7 @@ Kiểm tra: mở http://127.0.0.1:8000/docs.
 ### Frontend (port 3000)
 
 ```bash
-cd warehouse-management
+cd frontend
 npm start
 ```
 
@@ -60,14 +62,14 @@ Khi đã `npm run build`, backend phục vụ luôn giao diện tại http://127
 ### CLI: quét cả thư mục ảnh offline
 
 ```bash
-python main.py --folder ./images/clean --output output.json
+python -m cli.scan_folder --folder ./images/clean
 ```
 
-Quét xong, nhấn **SPACE** (Windows: Enter) để chốt pallet. Kết quả ghi vào `output.json` và gửi lên `POST /pallets` nếu backend đang chạy.
+Quét xong, nhấn **SPACE** (Windows: Enter) để chốt pallet. Kết quả ghi vào `data/output.json` và gửi lên `POST /pallets` nếu backend đang chạy.
 
 ---
 
-## 3. Cấu hình thường chỉnh (đầu file `wms_api.py`)
+## 3. Cấu hình thường chỉnh (đầu file `backend/api.py`)
 
 | Biến | Mặc định | Ý nghĩa |
 |---|---|---|
@@ -81,25 +83,28 @@ Quét xong, nhấn **SPACE** (Windows: Enter) để chốt pallet. Kết quả g
 
 Các thiết lập khi triển khai (đăng nhập, giới hạn upload, đường dẫn credentials…) đặt qua biến môi trường `WMS_*`. Xem [DEPLOY.md](DEPLOY.md) và `.env.example`.
 
-Các ngưỡng của decoder (kích thước mã nhỏ, độ dài mã tối thiểu, bộ kernel khử nhòe) nằm ở phần **CẤU HÌNH** đầu file `decoder.py`.
+Các ngưỡng của decoder (kích thước mã nhỏ, độ dài mã tối thiểu, bộ kernel khử nhòe) nằm ở phần **CẤU HÌNH** đầu file `backend/decoder.py`.
 
 ---
 
 ## 4. Cấu trúc mã nguồn
 
 ```
-wms_api.py            FastAPI: quét ảnh/video, stream MJPEG, thumbnail, đồng bộ Sheets
-decoder.py            Giải mã QR nhiều tầng (zxing-cpp, tiền xử lý, khử nhòe)
-parser.py             Tách payload QR → CartonData
-pallet_manager.py     Gom carton vào pallet, chặn trùng, cảnh báo lệch lô, xuất JSON
-main.py, utils.py     CLI quét thư mục ảnh
-wms_api_client.py     Client gửi pallet từ CLI lên POST /pallets
-weights/              Model YOLO (best_v2.pt, best_v1_original.pt) + model WeChat (tuỳ chọn)
+backend/
+  api.py              FastAPI: quét ảnh/video, stream MJPEG, thumbnail, đồng bộ Sheets, phục vụ frontend
+  decoder.py          Giải mã QR nhiều tầng (zxing-cpp, tiền xử lý, khử nhòe)
+  qr_parser.py        Tách payload QR → CartonData
+  pallet_manager.py   Gom carton vào pallet, chặn trùng, cảnh báo lệch lô, xuất JSON
+cli/
+  scan_folder.py      Quét thư mục ảnh (python -m cli.scan_folder)
+  console.py          Logging, banner, chờ phím SPACE
+  wms_client.py       Gửi pallet từ CLI lên POST /pallets
+frontend/             Giao diện React — xem frontend/README.md
 training/             Sinh dataset, fine-tune YOLO, so sánh model — xem training/README.md
-warehouse-management/ Frontend React
+weights/              Model YOLO (best_v2.pt, best_v1_original.pt) + model WeChat (tuỳ chọn)
+docs/                 SETUP.md, DEPLOY.md, yolo_v1_training/ (biểu đồ + args train của model gốc)
 images/               Ảnh / video kiểm thử (clean/, test/, z77*.jpg là ảnh kho thật)
-uploads/              Video upload từ web app (tự sinh, không commit)
-qr/                   Biểu đồ train của model YOLO gốc
+uploads/, data/       Video upload / output.json (tự sinh, không commit)
 ```
 
 ---

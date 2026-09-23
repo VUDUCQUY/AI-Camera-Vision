@@ -1,6 +1,6 @@
 """
-wms_api_client.py
-Client gửi pallet từ CLI (main.py) lên WMS API (wms_api.py, route POST /pallets).
+cli/wms_client.py
+Client gửi pallet từ CLI (cli/scan_folder.py) lên WMS API (backend/api.py, route POST /pallets).
 Nếu server bật đăng nhập, đặt cùng biến WMS_BASIC_AUTH="user:mật_khẩu" ở máy chạy CLI.
 """
 import logging

@@ -34,8 +34,8 @@ Chạy không dùng Docker (Windows/Linux):
 ```bash
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
-cd warehouse-management && npm ci && npm run build && cd ..
-WMS_BASIC_AUTH=admin:matkhau python -m uvicorn wms_api:app --host 0.0.0.0 --port 8000 --workers 1
+cd frontend && npm ci && npm run build && cd ..
+WMS_BASIC_AUTH=admin:matkhau python -m uvicorn backend.api:app --host 0.0.0.0 --port 8000 --workers 1
 ```
 
 ## Checklist trước khi mở ra Internet

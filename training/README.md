@@ -12,7 +12,7 @@ python training/train.py --epochs 12            # → training/runs/finetune_v2/
 python training/compare.py weights/best_v1_original.pt training/runs/finetune_v2/weights/best.pt
 ```
 
-Chỉ chép model mới vào `weights/` và đổi `YOLO_WEIGHTS` trong `wms_api.py` khi `compare.py` cho thấy model mới
+Chỉ chép model mới vào `weights/` và đổi `YOLO_WEIGHTS` trong `backend/api.py` (hoặc biến `WMS_YOLO_WEIGHTS`) khi `compare.py` cho thấy model mới
 **không đọc mất mã** trên nhóm ảnh **CHƯA THẤY**.
 
 ## Dataset (`make_dataset.py`)
